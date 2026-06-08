@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: admin-frontend
+  namespace: tracking-app
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: admin-frontend
+
+  template:
+    metadata:
+      labels:
+        app: admin-frontend
+
+    spec:
+      containers:
+        - name: admin
+
+          # temporary valid image
+          image: nginx:latest
+
+          imagePullPolicy: Always
+
+          ports:
+            - containerPort: 5173
