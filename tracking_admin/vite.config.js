@@ -17,7 +17,7 @@ export default defineConfig({
   server: {
     host: true, // allow external access
     allowedHosts: [
-      ".softwarestack.xyz", // ✅ allows ALL subdomains
+      ".revsales.xyz", // ✅ allows ALL subdomains
     ],
   },
 });
